@@ -3,8 +3,7 @@
 ReceiptSnap is a Streamlit-based receipt analysis and expense-splitting web app. It lets a user upload a receipt image, ask questions about it, get a structured summary, and send the final breakdown via email.
 
 ## Live Demo
-
-https://receipt-splitter-269r.onrender.com
+https://recieptsplitterbysingh.streamlit.app/
 
 ## Overview
 
