@@ -2,6 +2,10 @@
 
 ReceiptSnap is a Streamlit-based receipt analysis and expense-splitting web app. It lets a user upload a receipt image, ask questions about it, get a structured summary, and send the final breakdown via email.
 
+## Live Demo
+
+https://receipt-splitter-269r.onrender.com
+
 ## Overview
 
 This app is designed for quick receipt processing and bill splitting. A user enters their name and email, uploads a receipt, and then interacts with a Gemini-powered assistant that can:
@@ -37,14 +41,14 @@ This app is designed for quick receipt processing and bill splitting. A user ent
 - `streamlit/secrets.toml` – local secrets file for app credentials
 - `.streamlit/secrets.toml` – fallback secret location used for runtime startup
 
-## How the App Works
+## Workflow
 
-1. The user opens the app and completes the onboarding form.
-2. A Gemini chat session is created with a system instruction that defines the app’s behavior.
-3. The user uploads a receipt image or types a question.
-4. The image is sent to Gemini for analysis.
-5. The AI extracts itemized data, totals, and optional splits.
-6. The user can click the email button to generate a summary and send it to their configured email address.
+1. User opens the app and enters their name and email address.
+2. A Gemini chat session is created with the app’s system instructions.
+3. The user uploads a receipt image or sends a question in the chat.
+4. The app sends the receipt and prompt to Gemini for parsing and understanding.
+5. Gemini extracts item details, totals, taxes, and any split logic requested by the user.
+6. The user can review the breakdown and click the summary button to email the final result.
 
 ## Files in Use
 
@@ -123,13 +127,6 @@ If `streamlit` is not on the PATH in your environment, run:
 ```bash
 .\venv\Scripts\python.exe -m streamlit run app.py
 ```
-
-## Notes
-
-- The app expects valid Gemini and Gmail credentials.
-- The Gmail account should use an App Password if two-factor authentication is enabled.
-- Receipt images should be JPG, JPEG, or PNG files.
-- This app is intended for local use and quick demo workflows rather than production-grade deployment.
 
 ## Example Use Case
 
